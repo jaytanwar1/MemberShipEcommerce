@@ -62,15 +62,15 @@ if __name__ == "__main__":
     # Final successful record with SHA 256 member id
     successful_rec_result = generate_memberid(successful_rec)
     logger.info("No of successful records found in the file : " + str(successful_rec_result.count()))
-    successful_rec_result.show(5,False)
+    #successful_rec_result.show(5,False)
 
     # writing in CSV , it can be done in parquet as well
     successful_rec_result.write.partitionBy("event_time").format("csv") \
-        .option("header", "false").mode('append').save("./output/success_record")
+        .option("header", "true").mode('append').save("./output/success_record")
 
     logger.info("No of unsuccessful records found in the file : " + str(unsuccessful_rec.count()))
     unsuccessful_rec.write.partitionBy("event_time").format("csv") \
-        .option("header", "false").mode('append').save("./output/unsuccess_record")
+        .option("header", "true").mode('append').save("./output/unsuccess_record")
 
     logger.info("Finished MemberShip ID Generation")
     spark.stop()

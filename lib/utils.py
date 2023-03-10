@@ -6,6 +6,10 @@ from pyspark.sql.functions import *
 
 # Method to assign conf from SPARK CONF file
 def get_spark_app_config():
+    """ Method to get and set
+    spark config.
+    @output param: spark conf object
+    """
     spark_conf = SparkConf()
     config = configparser.ConfigParser()
     config.read("spark.conf")
@@ -16,6 +20,11 @@ def get_spark_app_config():
 
 # Method to load raw CSV file as DF
 def load_df(spark, data_file):
+    """ Method to read csv file
+        from give path
+        @input param : sparkSession obj, data file path
+        @output param: dataframe
+        """
     return spark.read \
         .option("header", "true") \
         .option("inferSchema", "true") \

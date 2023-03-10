@@ -1,5 +1,5 @@
-23/03/10 01:04:35 INFO EcomMembershipID: Starting MemberShip ID Generation
-23/03/10 01:04:41 INFO EcomMembershipID: No of of records found in the file : 4999
-23/03/10 01:04:42 INFO EcomMembershipID: No of successful records found in the file : 706
-23/03/10 01:04:44 INFO EcomMembershipID: No of unsuccessful records found in the file : 4293
-23/03/10 01:04:45 INFO EcomMembershipID: Finished MemberShip ID Generation
+23/03/10 09:29:34 INFO EcomMembershipID: Starting MemberShip ID Generation
+23/03/10 09:29:38 INFO EcomMembershipID: No of of records found in the file : 4999
+23/03/10 09:29:39 INFO EcomMembershipID: No of successful records found in the file : 706
+23/03/10 09:29:40 INFO EcomMembershipID: No of unsuccessful records found in the file : 4293
+23/03/10 09:29:41 INFO EcomMembershipID: Finished MemberShip ID Generation
