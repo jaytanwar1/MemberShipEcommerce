@@ -1,0 +1,25 @@
+1. Which are the top 10 members by spending?
+
+SELECT
+    Membership_ID,
+    SUM(total_items_price) AS Total_spending
+FROM
+    Transactions
+GROUP BY
+    member_id
+ORDER BY
+    Total_spending DESC
+LIMIT 10;
+
+2. Which are the top 3 items that are frequently bought by members?
+
+SELECT
+    item_id,
+    COUNT(*) AS Frequency
+FROM
+    Transactions
+GROUP BY
+    Items_id
+ORDER BY
+    Frequency DESC
+LIMIT 3;
